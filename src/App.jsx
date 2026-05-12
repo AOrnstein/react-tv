@@ -16,7 +16,7 @@ export default function App() {
         <ShowSelection shows={shows} setSelectedShow={setSelectedShow} />
       </header>
       <main>
-        <ShowDetails show={selectedShow} />
+        <ShowDetails key={selectedShow?.name} show={selectedShow} />
       </main>
     </>
   );
