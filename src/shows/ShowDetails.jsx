@@ -5,10 +5,10 @@ import EpisodeList from "../episodes/EpisodeList";
 
 /** Allows users to browse through the episodes of the given show */
 export default function ShowDetails({ show }) {
-  const [selectedEpisode, setSelectedEpisode] = useState(show);
+  const [selectedEpisode, setSelectedEpisode] = useState();
 
   // If no show is provided, render a message asking the user to select a show
-  if (!selectedEpisode)
+  if (!show)
     return (
       <div className="show-details">
         <p>Please select a show</p>
